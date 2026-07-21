@@ -1,0 +1,16 @@
+{
+  "name": "devcostoll",
+  "version": "1.0.0",
+  "description": "DevCostoll — full-stack developer toolkit. Root scripts to build and run the combined app.",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install --prefix frontend && npm install --prefix backend",
+    "build": "npm run build --prefix frontend && npm run copy",
+    "copy": "node scripts/copy-dist.js",
+    "dev": "npm run dev --prefix frontend & npm run dev --prefix backend",
+    "start": "npm start --prefix backend"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

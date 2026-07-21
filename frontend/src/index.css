@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── DevCostoll global resets ── */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: #0A0C10;
+  color: #E7E9F2;
+  font-family: Inter, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #0A0C10; }
+::-webkit-scrollbar-thumb { background: #232735; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #7C5CFF55; }
+
+/* Fluid icon sizing via CSS custom property — used by ToolBadge */
+:root {
+  --icon-sm: clamp(24px, 3vw, 30px);     /* sidebar */
+  --icon-md: clamp(40px, 5vw, 52px);     /* dashboard grid card */
+  --icon-lg: clamp(36px, 5vw, 48px);     /* tool header */
+}
